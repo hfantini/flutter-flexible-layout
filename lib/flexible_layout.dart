@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_flexible_layout/structures/enumerations/width_classification.dart';
+import 'package:flutter_flexible_layout/width_classification.dart';
 
 class FlexibleLayout extends StatefulWidget
 {
@@ -19,7 +19,7 @@ class FlexibleLayout extends StatefulWidget
     {
         if ( children.isEmpty )
         {
-            throw Exception("Children must have at last one element.");
+            throw Exception("Children must have at least one element.");
         }
     }
 
@@ -97,7 +97,7 @@ class FlexibleLayoutState extends State<FlexibleLayout>
                     {
                         WidthClassification deviceWidthClassification = WidthClassificationHelper.getClassificationByValue(constraints.maxWidth);                  
 
-                        print("DEVICE CLASSIFICATION: $deviceWidthClassification");
+                        print("[FLEXIBLE_LAYOUT] DEVICE CLASSIFICATION CHANGED: $deviceWidthClassification");
                         return getWidgetBasedOnClassification(deviceWidthClassification); // create function here to adapt to the parent widget's constraints
                     },
                 );
