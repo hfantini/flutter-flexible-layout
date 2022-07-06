@@ -97,7 +97,7 @@ class FlexibleLayoutState extends State<FlexibleLayout>
                     {
                         WidthClassification deviceWidthClassification = WidthClassificationHelper.getClassificationByValue(constraints.maxWidth);                  
 
-                        print("[FLEXIBLE_LAYOUT] DEVICE CLASSIFICATION CHANGED: $deviceWidthClassification");
+                        debugPrint("[FLEXIBLE_LAYOUT] DEVICE CLASSIFICATION CHANGED: $deviceWidthClassification");
                         return getWidgetBasedOnClassification(deviceWidthClassification); // create function here to adapt to the parent widget's constraints
                     },
                 );

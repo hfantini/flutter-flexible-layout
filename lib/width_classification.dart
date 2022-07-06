@@ -1,12 +1,12 @@
 enum WidthClassification
 {
-    XS,
-    SM,
-    MD,
-    LG,
-    XL,
-    XXL,
-    XXXL;
+    XS, // MAX 576
+    SM, // 577 ~ 768
+    MD, // 769 ~ 992,
+    LG, // 993 ~ 1200
+    XL, // 1201 ~ 1600
+    XXL, // 1601 ~ 1980
+    XXXL; // MIN 1981
 }
 
 class WidthClassificationHelper
